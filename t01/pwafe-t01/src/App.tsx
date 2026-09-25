@@ -22,7 +22,7 @@ function App() {
   return (
     <main className="min-h-screen bg-slate-100 p-8">
       <section className="mx-auto mb-8 max-w-md rounded bg-white p-4 shadow">
-        <div className="mb-4">
+        <div className="mb-5">
           <span className="text-sm font-medium uppercase tracking-wide text-sky-600">Informações do Aluno</span>
           <h1>{aluno.nome}</h1>
           <p>Curso: {aluno.curso}</p>
