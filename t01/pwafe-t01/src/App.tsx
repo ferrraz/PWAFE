@@ -13,7 +13,7 @@ function App() {
   // const ano = 2
 
   const aluno: Aluno = {
-    nome: "Mário Amorim",
+    nome: "Fábio Ferraz",
     curso: "Desenvolvimento de Software",
     ano: 2,
     interesses: ["Programação", "Jogos", "Música"],
