@@ -25,6 +25,7 @@ function App() {
     nome: "Programação Web Avançada e Frameworks",
     horas: 50,
   };
+  
   return (
     // min h-screen bg-slate-100 p-8 é um conjunto de classes do Tailwind CSS que define o estilo do elemento <main>:
     // min-h-screen: Define a altura mínima do elemento como a altura total da tela (viewport). Isso garante que o elemento ocupe pelo menos toda a altura da janela do navegador.
