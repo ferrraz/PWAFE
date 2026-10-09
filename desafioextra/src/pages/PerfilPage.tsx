@@ -59,11 +59,12 @@ function PerfilPage() {
 
         </div>
 
-        <button
-          onClick={() => navigate(-1)}
-          className="mt-8 rounded-lg bg-slate-700 px-5 py-3 font-semibold text-white hover:bg-slate-800"
-        >
+        <button onClick={() => navigate(-1)} className="mt-8 rounded-lg bg-slate-700 px-5 py-3 font-semibold text-white hover:bg-slate-800">
           ← Voltar
+        </button>
+
+        <button onClick={() => navigate('/detalhes')} className="mt-8 rounded-lg bg-slate-700 px-5 py-3 font-semibold text-white hover:bg-slate-800">
+          Ver Detalhes do Perfil
         </button>
 
       </div>
