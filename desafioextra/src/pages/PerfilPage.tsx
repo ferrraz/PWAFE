@@ -1,4 +1,7 @@
 import { useNavigate } from 'react-router-dom'
+import Etiqueta from '../components/Etiqueta'
+import Seccao from '../components/Seccao'
+import { perfil } from '../data/perfil'
 
 function PerfilPage() {
 
@@ -10,14 +13,14 @@ function PerfilPage() {
       <div className="w-full max-w-xl rounded-3xl bg-white p-8 shadow-lg">
 
         <h1 className="text-3xl font-bold text-slate-800">
-          Fábio Ferraz
+          {perfil.nome}
         </h1>
 
         <p className="mt-2 text-lg text-slate-500">
           Desenvolvimento de Software · 2.º ano
         </p>
 
-        <div className="mt-8">
+        {/* <div className="mt-8">
 
           <h2 className="text-xl font-bold text-slate-700">
             Sobre mim
@@ -29,42 +32,29 @@ function PerfilPage() {
             Artificial e experiência de utilizador.
           </p>
 
-        </div>
+        </div> */}
 
-        <div className="mt-8">
+        <Seccao titulo="Sobre mim">
+          <p className="mt-3 leading-7 text-slate-600">
+            Sou estudante de Desenvolvimento de Software e tenho
+            interesse em desenvolvimento Web, React, Inteligência
+            Artificial e experiência de utilizador.
+          </p>
+          </Seccao>
 
-          <h2 className="text-xl font-bold text-slate-700">
-            Interesses
-          </h2>
-
+        <Seccao titulo="Interesses">
           <div className="mt-4 flex gap-3">
-
-            <span className="rounded-full bg-blue-100 px-4 py-2 text-blue-700">
-              React
-            </span>
-
-            <span className="rounded-full bg-blue-100 px-4 py-2 text-blue-700">
-              UX
-            </span>
-
-            <span className="rounded-full bg-blue-100 px-4 py-2 text-blue-700">
-              Jogos
-            </span>
-
-            <span className="rounded-full bg-blue-100 px-4 py-2 text-blue-700">
-              IA
-            </span>
-
+            {perfil.interesses.map((interesse) => (
+              <Etiqueta key={interesse} texto={interesse} />
+            ))}
           </div>
+        </Seccao>
 
-        </div>
-
-        <button onClick={() => navigate(-1)} className="mt-8 rounded-lg bg-slate-700 px-5 py-3 font-semibold text-white hover:bg-slate-800">
+        <button
+          onClick={() => navigate(-1)}
+          className="mt-8 rounded-lg bg-slate-700 px-5 py-3 font-semibold text-white hover:bg-slate-800"
+        >
           ← Voltar
-        </button>
-
-        <button onClick={() => navigate('/detalhes')} className="mt-8 rounded-lg bg-slate-700 px-5 py-3 font-semibold text-white hover:bg-slate-800">
-          Ver Detalhes do Perfil
         </button>
 
       </div>
