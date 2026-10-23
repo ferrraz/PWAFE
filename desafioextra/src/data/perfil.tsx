@@ -1,5 +1,5 @@
 // src/types.ts (os mesmos campos da PL01)
-export type Perfil = {
+export type Perfils = {
 nome: string;
 curso: string;
 ano: number;
@@ -8,7 +8,13 @@ interesses: string[];
 procuraEstagio: boolean;
 };
 // src/components/CartaoPerfil.tsx
-import type { Perfil } from '../types';
-type CartaoPerfilProps = {
-perfil: Perfil;
-};
+export const Perfil: Perfils[] = [
+    {
+        nome: "Mário Amorim",
+        curso: "Desenvolvimento de Software",
+        ano: 2,
+        cidade: "Porto",
+        interesses: ["Desenvolvimento Web", "React", "Inteligência Artificial"],
+        procuraEstagio: true,
+    },
+];

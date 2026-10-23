@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import Etiqueta from './components/Etiqueta'
 import Avatar from './components/Avatar'
 import Seccao from './components/Seccao'
-import { perfil } from './data/perfil'
+import { Perfil } from './data/perfil'
 
 
 // type Perfil = {
@@ -38,16 +38,16 @@ function App() {
         <div className="flex items-center gap-6">
 
           {/* Avatar */}
-          <Avatar nome={perfil.nome} />
+          <Avatar nome={Perfil[0].nome} />
 
           {/* Nome e curso */}
           <div>
             <h1 className="text-2xl font-bold text-slate-800">
-              {perfil.nome}
+              {Perfil[0].nome}
             </h1>
 
             <p className="mt-2 text-lg text-slate-500">
-              {perfil.curso} · {perfil.ano}
+              {Perfil[0].curso} · {Perfil[0].ano}.º ano
             </p>
           </div>
 
@@ -60,7 +60,7 @@ function App() {
           </h2> */}
         <Seccao titulo="Interesses">
           <div className="flex flex-wrap gap-3">
-            {perfil.interesses.map((interesse) => (
+            {Perfil[0].interesses.map((interesse) => (
               <Etiqueta key={interesse} texto={interesse} />
             ))}
           </div>
@@ -68,7 +68,7 @@ function App() {
         {/* </div> */}
 
         {/* Estágio */}
-        {perfil.procuraEstagio && (
+        {Perfil[0].procuraEstagio && (
           <div className="mt-5">
             <Etiqueta texto="À procura de estágio" destaque />
           </div>
